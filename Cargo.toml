@@ -1,0 +1,26 @@
+[package]
+name = "kanshi"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.95"
+apibara-core = { git = "https://github.com/apibara/dna", rev = "9caa385" }
+apibara-sdk = { git = "https://github.com/apibara/dna", rev = "9caa385" }
+async-trait = "0.1.84"
+bigdecimal = { version = "0.4.5", features = ["serde"] }
+chrono = "0.4.39"
+clap = "4.5.23"
+dotenv = "0.15.0"
+futures = "0.3.31"
+futures-util = "0.3.31"
+num-bigint = "0.4.6"
+prost = "0.13.4"
+redis = "0.27.6"
+serde = "1.0.217"
+serde_json = "1.0.134"
+starknet = "0.12.0"
+tokio = "1.42.0"
+tokio-postgres = "0.7.12"
+tokio-stream = "0.1.17"
+
