@@ -69,7 +69,8 @@ impl IndexerService {
 
     // Helper to get state file path
     fn get_state_file_path(&self) -> PathBuf {
-        PathBuf::from("indexer_state.json")
+        let config = self.config.clone();
+        PathBuf::from(config.write_path)
     }
 
 
