@@ -11,6 +11,7 @@ pub struct Config {
     pub contract_address: Felt,
     // pub filter: String,
     pub starting_block: u64,
+    pub write_path: String
 }
 
 #[derive(Debug, Clone, Copy, PartialEq)]
@@ -105,6 +106,7 @@ impl Config {
                         .parse()
                         .expect("STARTING_BLOCK must be a valid number")
                 }),
+            write_path: env::var("WRITE_PATH").unwrap_or_else(|_| "indexer_state.json".to_string())
         })
     }
 }
